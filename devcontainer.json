@@ -1,0 +1,14 @@
+{
+  "name": "Multi-Container Environment",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "ubuntu",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "vscode",
+  "extensions": [
+    "ms-vscode.remote-containers",
+    "ms-vscode.cpptools"
+  ],
+  "forwardPorts": [3000, 8080],
+  "postCreateCommand": "apt-get update && apt-get install -y curl git",
+  "shutdownAction": "stopCompose"
+}

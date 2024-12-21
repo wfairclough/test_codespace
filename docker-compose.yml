@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  ubuntu:
+    image: ubuntu:22.04
+    container_name: ubuntu-container
+    command: sleep infinity
+    volumes:
+      - ..:/workspace:cached
+    networks:
+      - dev-network
+    stdin_open: true
+    tty: true
+
+  kali:
+    image: kalilinux/kali-rolling
+    container_name: kali-container
+    command: sleep infinity
+    volumes:
+      - ..:/workspace:cached
+    networks:
+      - dev-network
+    stdin_open: true
+    tty: true
+
+networks:
+  dev-network:
+    driver: bridge
+
