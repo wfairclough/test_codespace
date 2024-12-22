@@ -12,7 +12,9 @@ services:
     tty: true
 
   kali:
-    image: kalilinux/kali-rolling
+    build:
+      context: .
+      dockerfile: ./containers/kali/Dockerfile
     container_name: kali-machine
     command: sleep infinity
     volumes:

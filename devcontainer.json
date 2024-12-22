@@ -9,6 +9,6 @@
     "ms-vscode.cpptools"
   ],
   "forwardPorts": [3000, 8080],
-  "postCreateCommand": "apt-get update && apt-get install -y curl git",
+  "postCreateCommand": "apt-get update && apt-get install -y curl git neovim",
   "shutdownAction": "stopCompose"
 }
