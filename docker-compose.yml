@@ -2,7 +2,7 @@ version: '3.8'
 services:
   ubuntu:
     image: ubuntu:22.04
-    container_name: ubuntu-container
+    container_name: ubuntu-machine
     command: sleep infinity
     volumes:
       - ..:/workspace:cached
@@ -13,7 +13,7 @@ services:
 
   kali:
     image: kalilinux/kali-rolling
-    container_name: kali-container
+    container_name: kali-machine
     command: sleep infinity
     volumes:
       - ..:/workspace:cached
