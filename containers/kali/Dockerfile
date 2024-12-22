@@ -9,7 +9,5 @@ RUN apt-get update && apt-get install -y \
     neovim \
     tmux
 
-RUN pip3 install --upgrade pip
-
 CMD ["/bin/bash"]
 
